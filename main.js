@@ -27,17 +27,17 @@ cartTab.classList: This accesses the list of CSS classes currently applied to th
 let productList = []; /*a variable and empty array is here, so we will fillup this array with productjason data*/
 const showCards = () => {/*After getting data in array we will show cards*/
  productList.forEach(product => {
-  const orderCard = document.createElement('div');
-          orderCard.classList.add('order-card')
+  const orderCard = document.createElement('div');  /*making element in java script*/
+          orderCard.classList.add('order-card') /*this is class*/
           orderCard.innerHTML = `
                       <div class="card-image">
-                            <img src="${product.image}">
+                            <img src="${product.image}"> 
                         </div>
                         <h4>${product.name}</h4> 
                         <h4 class="price">${product.price}</h4>
                         <a href="#" class="btn">Add to Cart</a>
                         `;
-/*Appnd here*/
+/*Append here*/
 cardList.appendChild(orderCard)
 
 })
