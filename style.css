@@ -1,0 +1,693 @@
+/*From fonts.google.com we copy code of roboto condensed for font change */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Universal Selector*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* CSS code of Font Family paste here because we need this font in whole website*/
+    font-family: "Roboto Condensed", sans-serif;
+    /*border: .1rem solid red;*/
+}
+
+/* Website is Big so we will use root here to create Color Varibales(Digits or data) for store colors because it will be easy 
+for anychanging further for all.Benifits= Don't need to change indiviusally.*/
+root: {
+    /*whenever make variable you hAVE to put HYPHAN twice then you can give any name to your color*/
+    /* the Digits call Export*/
+    --lead: #212121;
+    --fold-finger: #F2BD12;
+    --eye-ball: #FFFDF7;
+    --hint-yellow: #FCF1CC;
+    --pure-white: #FFF;
+
+}
+
+/* We are gonna ad body color here*/
+body {
+    background: #FFFDF7;
+}
+
+/* Now we will do styling Here*/
+/*(1)........................BASIC STYLING*/
+/* For Remove underline from all anchors */
+a {
+    font-size: 1.1 rem;
+    text-decoration: none;
+    /* for color in all anchors*/
+    color: var(--lead);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /*for mobile/resposive*/
+}
+
+/* To remove List Dots*/
+li {
+    list-style: none;
+}
+
+/*we want to allign all content / links between the page so make a class of between*/
+.between {
+    justify-content: space-between;
+}
+
+/*Making gap2 for gap between bag icon and sign in button*/
+.gap-2 {
+    gap: 2rem;
+}
+
+/*Making gap between navbar list*/
+.gap-3 {
+    gap: 3rem;
+}
+
+/* navbar touching to the borders so we have to make a wrapper in which whole website remain still in allignment*/
+.wrapper {
+    max-width: 1200px;
+    /*for move it to center*/
+    margin: auto;
+    padding-inline: 1.5rem;
+    /* content stay away from screen*/
+
+}
+
+/*In website to set images we need to do some properties*/
+img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    /*For center image*/
+    display: block;
+    /*For remove image space & making it inline*/
+}
+
+.p-top {
+    padding-bottom: 10rem;
+}
+
+.text-center {
+    /*For headings styling*/
+    text-align: center;
+}
+
+.mt-4 {
+    /*for margin*/
+    margin-top: 4rem;
+}
+
+.m-auto {
+    /*Newsletter part= for paragraph text in center*/
+    margin: auto;
+}
+
+/*(2)..........Header Styling*/
+/* navbar list below from above*/
+.navbar {
+    min-height: 14vh;
+}
+
+/*After navbar we are gonna style logo & class already made*/
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #F2BD12;
+}
+
+/*After Logo we set button */
+.btn {
+    display: inline-block;
+    /*(navbar portion)=Because button is in anchor so inline*/
+    padding: .9rem 2rem;
+    /*(navbar portion)=padding top & bottom is .9rem, right & left 2rem*/
+    background-color: #F2BD12;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.373) 0 2px 1px;
+    /*add box shadow in button, Botton 0r x-axis=0,shadow or yaxis=2px,saprete & blur 1px*/
+    transition: .3s ease-in-out;
+    /*from Hover portion, For making hover smooth */
+}
+
+/*Button Hover*/
+.btn:hover {
+    background: #212121;
+}
+
+/*For cart icon color changing & more styling*/
+.cart-icon {
+    font-size: 1.3rem;
+    position: relative;
+    /*this is cart value portion= cart values are hidden behind cart icon so we make cart value relavent in the cart icon */
+
+}
+
+/*Set the values in the cart icon(next to bag icon) so select first cart-icon class then enter cart-value*/
+.cart-icon .cart-value {
+    position: absolute;
+    /*first we position it & make it relative to cart icon above*/
+    top: 50%;
+    right: -10px;
+    font-size: .85rem;
+    width: 20px;
+    aspect-ratio: 1;
+    /*we want to make it circle so*/
+    border-radius: 100vw;
+    background: #F2BD12;
+    color: #212121;
+    text-align: center;
+    /*for making text in center*/
+    line-height: 20px;
+    /*from text to top pf the circle height*/
+}
+
+/*There is hamburger in dekstop-action so make styling & */
+.dekstop-action .hamburger {
+    font-size: 1.5rem;
+    /*icon font size*/
+    display: none;
+    /*hide hamburger & dekstop icon cause dont need right now*/
+}
+
+.mobile-menu {
+    /*Hide this menu from dekstop*/
+    display: none;
+}
+
+.mt-one-half {
+    /*FOOTER PART= for spacing in paragraph*/
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+/*(3)......................SECTION STYLING*/
+.hero-section {
+    min-height: calc(100vh - 14vh);
+    /* SETTING SIZE=100vh is total height of page/view port & we have already take 14vh of navbar so minus 14 from 100 via calculation*/
+}
+
+.content,
+.image-container {
+    /*flex both content&img for same sizing */
+    flex: 1;
+    /*Flex 1 is just for child class not parent*/
+    flex-basis: 300px;
+    /*for mobile/resposive*/
+}
+
+h1 span {
+    /*change the color of span in h1*/
+    color: #F2BD12;
+}
+
+p {
+    /*Paragraph*/
+    font-size: 1.25rem;
+    color: gray;
+    line-height: 1.8rem;
+    font-weight: 400;
+}
+
+.para {
+    margin-block: 2rem;
+    max-width: 550px;
+
+}
+
+.social-icon {
+    background: var(--hint-yellow, #ebe5b9);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.373) 0 2px 1px;
+    text-decoration: none;
+
+    /* centering of the divs(means icons) inside: */
+    display: flex;
+    /**/
+    justify-content: center;
+    /* centers horizontally */
+    align-items: center;
+    /* centers vertically */
+}
+
+.social-icon:hover {
+    /*For making icons hover*/
+    background: lightslategray;
+}
+
+/*SECTION(01 HERO)*/
+h5 {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: #F2BD12;
+    text-transform: uppercase;
+
+    h2: {
+        font-size: 3.7rem;
+        text-transform: capitalize;
+        color: black;
+
+    }
+
+}
+
+h3 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #212121;
+}
+
+.service-card h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+
+}
+
+/*SECTION (02 CARDS)*/
+.order-card {
+    flex: ;
+    flex-basis: ;
+    /*(For resposive/mobile) giving order card full size we flex 1 it*/
+    background: white;
+    border: .1rem solid #F2BD12;
+    /*background is white so we should change the border*/
+    border-radius: 3rem;
+    /*making border corners in shape*/
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+    /*X-axix is 8px, y is 8px, blut & spread 8px*/
+    box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+}
+
+.order-card img {
+    width: 15rem;
+    filter: drop-shadow(black 0 10px 10px 10px);
+    /*use filter property for add shadows in image for make it beautiful
+     black color for 0 axix, 10px for x-axix, 10px for y-axix */
+}
+
+h4 {
+    font-size: 1rem;
+    color: #212121;
+
+}
+
+.order-card .price {
+    /*in order card there is price so*/
+    font-size: 1.7rem;
+    color: #F2BD12;
+    padding: 1.3rem 0 2rem 0;
+    /*padding is about adjust size of div=top 1.3, right 0, bottom 2, left 0*/
+
+}
+
+/*CART TAB STYLING*/
+.cart-tab {
+    background: #d8ca9a;
+    position: fixed;
+    inset: 0 -500px 0 auto;     /*-500px for hide cart*/
+    /* This cart/div is 0 from top, 0 from bottom, 0 from right, but we dont set it from left so auto*/
+    width: 25rem;
+    padding-block: 2rem;
+    /* block means from top and bottom*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      z-index: 99;                 /*for making cart-tab at the top*/
+box-shadow: inset rgba(0, 0, 0, 0.1) -10px -10px 20px; /*box shadow*/
+transition: .3s ease-in-out;
+}
+.cart-tab-active{       /*Javacript=After click on bag icon This is for active*/
+    inset: 0 0 0 auto;      
+}
+
+.cart-list {
+    flex: 1;
+    /*for making gap between your cart & cart list*/
+    width: 100%;
+    margin-top: 1.5rem;
+    overflow:auto; /*prevent from overflow*/
+}
+.cart-list::-webkit-scrollbar{ 
+width: 0;
+}                          
+
+.total-container {
+    width: 100%;
+    background: #F2BD12;
+    text-align: center;
+    margin-block: 1rem;
+    padding-block: 1rem;
+}
+
+.total-container h4 {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.btn-container .btn {
+    background: #212121;
+    color: white;
+    transition: .3s ease-in-out;
+    /*this is for hover*/
+}
+
+.btn-container .btn:hover {
+    /*for Hover*/
+    background: #F2BD12;
+    color: #212121;
+}
+.item{
+    display: flex; /*we want it in row so flex*/
+    align-items: center;
+    gap: 1rem;
+    padding: .7rem 1 ;  /*TOP & BOTTOM .7REM , RIGHT & LEFT 1rem*/
+}
+.cart-list .item:nth-child(even){   /*changing item div color in cart list*/
+    background: #ebe5b9;
+}
+.item .item-image img{
+    width: 5rem;
+}
+.item h4{
+    font-size: 1.3rem;
+    color: #212121;
+}
+.item .item-total{
+    font-weight: 400;
+    margin-top: .3rem;
+}
+.quantity-btn{
+    background: #212121;
+    color: #FFF;
+    width: 1.7rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    text-align: center;
+line-height: 1.7rem;
+
+}
+.quantity-value{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-inline: .6rem;
+}
+
+
+
+
+
+
+/*SECTION (03 REVIEWS)*/
+.review-container {
+    width: 650px;
+    max-width: 100%;
+
+}
+
+.swiper {
+    /*Slider*/
+    width: 100%;
+    height: 100%;
+
+}
+
+.profile {
+    width: 4rem;
+    aspect-ratio: 1;
+    /*this is for height*/
+    border-radius: 100vw;
+    overflow: hidden;
+    /*picture will not comeoutside & remain circle*/
+}
+
+.profile .img {
+    /*image in profile*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-star {
+    color: #F2BD12;
+
+}
+
+.arrow {
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 100vw;
+    background: #F2BD12;
+    color: #212121;
+    text-align: center;
+    line-height: 2.5rem;
+    /*for making icon in center*/
+}
+
+/*SECTION 04*/
+
+.app-container {
+    /*Parent class*/
+    background: #c0b593;
+    padding: 3rem 6rem;
+    /*padding of app-container/Div from top & bottom 3rem,right & left 6rem*/
+    border-radius: 3rem;
+
+}
+
+.app-container .content h2 {
+    /*style content in app-container to content then h2*/
+    width: 25rem;
+}
+
+.app-container .image-container img {
+    /*styling image app-container to img-container & then image*/
+    font-size: 4.rem;
+}
+
+/*SECTION (05NEWSLETTER)*/
+.input-container {
+    /*Prent class*/
+    width: 43rem;
+    max-width: 100%;
+    background: white;
+    padding: .8rem;
+    box-shadow: rgb(5, 5, 5) 0 5px 8px;
+    /*div box shadow= box shadow color is black, x-axix 0, y-axix 5px, spread & blur 8px*/
+    border-radius: 1rem;
+    margin: 4rem auto 0 auto;
+    /*for all spacing=top 4rem, right auto, bottom 0. left auto*/
+
+}
+
+input[type="email"] {
+    /*styling input type*/
+    flex: 1;
+    height: 6vh;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+}
+
+input[type="email"]:focus {
+    /*when focus then make outline none*/
+    outline: none;
+}
+
+
+
+
+
+
+
+
+/*FOOTER STYLING*/
+.footer-container {
+    margin-top: 10rem;
+    /*spacing from top*/
+    padding-block: 4rem;
+    background: #d8ca9a;
+}
+
+.footer-container .flex {
+    /*for making our menu flex*/
+    align-items: flex-start;
+}
+
+.footer-wrapper {
+    flex: 1;
+    flex-basis: 150px;
+    /*For Mobile/resposive*/
+}
+
+.footer-wrapper:nth-child(1) {
+    flex: 2;
+    /*maximize size of first footer wrapper*/
+    flex-basis: 300px;
+    /*For Mobile/resposinve 300 because its big in size*/
+}
+
+.footer-wrapper .social-icon {
+    /*Ico color change in footer wrapper*/
+    background: #FFFDF7;
+
+}
+
+.footer-wrapper .social-icon:hover {
+    /*Hover*/
+    background: #212121;
+    color: #FFFDF7;
+}
+
+.footer-link {
+    color: grey;
+    font-size: 1.1rem;
+    transition: .3s ease-in-out;
+}
+
+.footer-link:hover {
+    /*Hover*/
+    color: #212121;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Quiries for mobile Display or you can say make your website resposive*/
+/*.......(1)HEADER STYLING*/
+@media screen and (max-width: 780px)
+/*so in 780px we wamt to hide navlist and sign in button in dekstop-action in the header*/
+    {
+
+    .navlist,
+    .dekstop-action .btn {
+        display: none;
+    }
+
+    /*Now we want to show hamburger which is in dekstop-action so*/
+    .dekstop-action .hamburger {
+        display: block;
+    }
+
+    /*for showing menu in mobile*/
+    .mobile-menu {
+        display: flex;
+        /*BY Default flex show items in row*/
+        flex-direction: center;
+        flex-direction: column;
+        /*To view Flex as column*/
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        /*for making gap between each*/
+        position: absolute;
+        /*position to get rid of flow & then we can adjust it any where after position*/
+        top: 20%;
+        left: -100%;
+        /*fist it was 50 and then -100 to put it backside to hamburger or hide it*/
+        transform: translateX(-50%);
+        /*Translate in just x-axix because we need it horizentally*/
+        width: 20rem;
+        padding: 2rem;
+        background: #FFF;
+        border: .1rem solid #F2BD12;
+        /*background is white so we should change the border*/
+        border-radius: 3rem;
+        /*making border corners in shape*/
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
+        /*X-axix is 8px, y is 8px, blut & spread 8px*/
+        box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+        /*By default, when you apply a box-shadow without the inset keyword, it creates an outer shadow
+    inset is for apply this shadow innser side also*/
+
+    }
+
+    /*class in mdeia theory & we will active this in JS*/
+    .mobile-menu-active {
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .5s ease-in-out;
+        /*for making it smooth*/
+    }
+
+    /*SECTION STYLING*/
+    /*HERO STYLING*/
+    h1 {
+        font-size: 3.5rem;
+
+        .content {
+            /*content in h1 so*/
+            padding-top: 3rem;
+
+            .gap-2 {
+                gap: 1.4rem;
+                /*less gap between icons*/
+            }
+
+        }
+    }
+
+    /*SECTION 01*/
+    h2 {
+        font-size: 3rem;
+    }
+
+    /*SECTION 04*/
+    .app-container {
+        padding: 2.2rem;
+    }
+
+    .app-container .content h2 {
+        font-size: 3.5rem;
+
+    }
+}

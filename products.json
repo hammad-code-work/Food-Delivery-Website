@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "double Beef Burger",
+    "price": "Rs500",
+    "image": "images/burger.png"
+  },
+  {
+    "id": 2,
+    "name": "veggie Pizza",
+    "price": "Rs1400",
+    "image": "images/pizza.png"
+  },
+  {
+    "id": 3,
+    "name": "Fried Chicken",
+    "price": "Rs850",
+    "image": "images/burger.png"
+  },
+  {
+    "id": 4,
+    "name": "Chicken Roll",
+    "price": "Rs900",
+    "image": "images/chicken-roll.png"
+  },
+  {
+    "id": 5,
+    "name": "Sub Sandwitch",
+    "price": "Rs500",
+    "image": "images/sandwitch.png"
+  },
+  {
+    "id": 6,
+    "name": "chicken lasagna",
+    "price": "Rs500",
+    "image": "images/lasagna.png"
+  },
+  {
+    "id": 7,
+    "name": "Itallian spaghetti",
+    "price": "Rs750",
+    "image": "images/spaghetti.png"
+  },
+  {
+    "id": 8,
+    "name": "Spring Roll",
+    "price": "Rs600",
+    "image": "images/spring-roll.png"
+  }
+]
