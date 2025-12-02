@@ -291,6 +291,7 @@ h2 {
     box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px;
     /*X-axix is 8px, y is 8px, blut & spread 8px*/
     box-shadow: rgba(0, 0, 0, 0.05) 8px 8px 8px inset;
+    text-align: center;
 }
 
 .order-card img {
