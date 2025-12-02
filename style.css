@@ -11,8 +11,8 @@
     /*border: .1rem solid red;*/
 }
 
-/* Website is Big so we will use root here to create Color Varibales(Digits or data) for store colors because it will be easy 
-for anychanging further for all.Benifits= Don't need to change indiviusally.*/
+/* Website is Big so we will use root here to create Color Varibales(Digits or data) for store colors
+ because it will be easy for anychanging further for all.Benifits= Don't need to change indiviusally.*/
 root: {
     /*whenever make variable you hAVE to put HYPHAN twice then you can give any name to your color*/
     /* the Digits call Export*/
@@ -30,20 +30,24 @@ body {
 }
 
 /* Now we will do styling Here*/
-/*(1)........................BASIC STYLING*/
+/*(#00)......BASIC STYLING (Styling for all website content & you can apply these where you want these changes in whole website)*/
 /* For Remove underline from all anchors */
 a {
     font-size: 1.1 rem;
     text-decoration: none;
     /* for color in all anchors*/
-    color: var(--lead);
+    color: #212121;
 }
 
+/*Flex=to enable the Flexible Box Layout (Flexbox) model for an element and its direct children*/
 .flex {
+    /*AS we know flex is byfedault in row so making it in column we use this property, you can use this where you want this is for all website content*/
     display: flex;
+    /*For place all content in center*/
     align-items: center;
-    flex-wrap: wrap;
     /*for mobile/resposive*/
+    flex-wrap: wrap;
+
 }
 
 /* To remove List Dots*/
@@ -66,8 +70,9 @@ li {
     gap: 3rem;
 }
 
-/* navbar touching to the borders so we have to make a wrapper in which whole website remain still in allignment*/
+/*wrapper= Groups items for width, centering, and global positioning.*/
 .wrapper {
+    /*we use wrapper If content touching to the screen borders so we have to make a wrapper in which content remain still in allignment, its for all website content you can use where you want this changing*/
     max-width: 1200px;
     /*for move it to center*/
     margin: auto;
@@ -105,7 +110,7 @@ img {
     margin: auto;
 }
 
-/*(2)..........Header Styling*/
+/*(PAER#01)..........HEADER*/
 /* navbar list below from above*/
 .navbar {
     min-height: 14vh;
@@ -120,10 +125,14 @@ img {
 
 /*After Logo we set button */
 .btn {
+
     display: inline-block;
-    /*(navbar portion)=Because button is in anchor so inline*/
+    /*(This is navbar portion)=Because button is in anchor so inline*/
+
+
     padding: .9rem 2rem;
-    /*(navbar portion)=padding top & bottom is .9rem, right & left 2rem*/
+    /*(This is navbar portion)=padding top & bottom is .9rem, right & left 2rem*/
+
     background-color: #F2BD12;
     border-radius: 1rem;
     font-size: 1.1rem;
@@ -189,28 +198,31 @@ img {
 
 
 
-/*(3)......................SECTION STYLING*/
+/*(PART#02)......................SECTION STYLING
+(A=HERO SECTION)*/
 .hero-section {
     min-height: calc(100vh - 14vh);
-    /* SETTING SIZE=100vh is total height of page/view port & we have already take 14vh of navbar so minus 14 from 100 via calculation*/
+    /* ALL SECTION SETTING SIZE=100vh is total height of page/view port & we have already take 14vh of navbar so minus 14 from 100 via calculation*/
 }
 
+/*we select both parent container here content&image-container and put flex1 in them*/
 .content,
 .image-container {
-    /*flex both content&img for same sizing */
+    /*flex: 1; is to create responsive and dynamic layouts where space is distributed efficiently among elements.*/
     flex: 1;
-    /*Flex 1 is just for child class not parent*/
-    flex-basis: 300px;
     /*for mobile/resposive*/
+    flex-basis: 300px;
+
 }
 
+/*change the color of span in h1*/
 h1 span {
-    /*change the color of span in h1*/
     color: #F2BD12;
 }
 
+/*Paragraph styling*/
 p {
-    /*Paragraph*/
+
     font-size: 1.25rem;
     color: gray;
     line-height: 1.8rem;
@@ -224,14 +236,14 @@ p {
 }
 
 .social-icon {
-    background: var(--hint-yellow, #ebe5b9);
+    background: #ebe5b9;
     width: 3rem;
     height: 3rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.373) 0 2px 1px;
     text-decoration: none;
 
-    /* centering of the divs(means icons) inside: */
+    /* centering icons inside a div: */
     display: flex;
     /**/
     justify-content: center;
@@ -245,23 +257,16 @@ p {
     background: lightslategray;
 }
 
-/*SECTION(01 HERO)*/
+/*(B= SERVICE CARD)*/
 h5 {
     font-size: 1.2rem;
     letter-spacing: .2rem;
     color: #F2BD12;
     text-transform: uppercase;
 
-    h2: {
-        font-size: 3.7rem;
-        text-transform: capitalize;
-        color: black;
-
-    }
-
 }
 
-h3 {
+h2 {
     font-size: 2rem;
     text-transform: capitalize;
     color: #212121;
@@ -273,7 +278,7 @@ h3 {
 
 }
 
-/*SECTION (02 CARDS)*/
+/*(C= CARDS)*/
 .order-card {
     flex: ;
     flex-basis: ;
@@ -289,10 +294,10 @@ h3 {
 }
 
 .order-card img {
-    width: 15rem;
-    filter: drop-shadow(black 0 10px 10px 10px);
     /*use filter property for add shadows in image for make it beautiful
      black color for 0 axix, 10px for x-axix, 10px for y-axix */
+    width: 15rem;
+    filter: drop-shadow(black 0 10px 10px 10px);
 }
 
 h4 {
@@ -314,7 +319,8 @@ h4 {
 .cart-tab {
     background: #d8ca9a;
     position: fixed;
-    inset: 0 -500px 0 auto;     /*-500px for hide cart*/
+    inset: 0 -500px 0 auto;
+    /*-500px for hide cart*/
     /* This cart/div is 0 from top, 0 from bottom, 0 from right, but we dont set it from left so auto*/
     width: 25rem;
     padding-block: 2rem;
@@ -323,12 +329,16 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-      z-index: 99;                 /*for making cart-tab at the top*/
-box-shadow: inset rgba(0, 0, 0, 0.1) -10px -10px 20px; /*box shadow*/
-transition: .3s ease-in-out;
+    z-index: 99;
+    /*for making cart-tab at the top*/
+    box-shadow: inset rgba(0, 0, 0, 0.1) -10px -10px 20px;
+    /*box shadow*/
+    transition: .3s ease-in-out;
 }
-.cart-tab-active{       /*Javacript=After click on bag icon This is for active*/
-    inset: 0 0 0 auto;      
+
+.cart-tab-active {
+    /*Javacript=After click on bag icon This is for active*/
+    inset: 0 0 0 auto;
 }
 
 .cart-list {
@@ -336,11 +346,13 @@ transition: .3s ease-in-out;
     /*for making gap between your cart & cart list*/
     width: 100%;
     margin-top: 1.5rem;
-    overflow:auto; /*prevent from overflow*/
+    overflow: auto;
+    /*prevent from overflow*/
 }
-.cart-list::-webkit-scrollbar{ 
-width: 0;
-}                          
+
+.cart-list::-webkit-scrollbar {
+    width: 0;
+}
 
 .total-container {
     width: 100%;
@@ -368,37 +380,47 @@ width: 0;
     background: #F2BD12;
     color: #212121;
 }
-.item{
-    display: flex; /*we want it in row so flex*/
+
+.item {
+    display: flex;
+    /*we want it in row so flex*/
     align-items: center;
     gap: 1rem;
-    padding: .7rem 1 ;  /*TOP & BOTTOM .7REM , RIGHT & LEFT 1rem*/
+    padding: .7rem 1;
+    /*TOP & BOTTOM .7REM , RIGHT & LEFT 1rem*/
 }
-.cart-list .item:nth-child(even){   /*changing item div color in cart list*/
+
+.cart-list .item:nth-child(even) {
+    /*changing item div color in cart list*/
     background: #ebe5b9;
 }
-.item .item-image img{
+
+.item .item-image img {
     width: 5rem;
 }
-.item h4{
+
+.item h4 {
     font-size: 1.3rem;
     color: #212121;
 }
-.item .item-total{
+
+.item .item-total {
     font-weight: 400;
     margin-top: .3rem;
 }
-.quantity-btn{
+
+.quantity-btn {
     background: #212121;
     color: #FFF;
     width: 1.7rem;
     aspect-ratio: 1;
     border-radius: 100vw;
     text-align: center;
-line-height: 1.7rem;
+    line-height: 1.7rem;
 
 }
-.quantity-value{
+
+.quantity-value {
     font-size: 1.2rem;
     font-weight: 400;
     margin-inline: .6rem;
@@ -409,7 +431,7 @@ line-height: 1.7rem;
 
 
 
-/*SECTION (03 REVIEWS)*/
+/*(D= REVIEWS)*/
 .review-container {
     width: 650px;
     max-width: 100%;
@@ -455,7 +477,7 @@ line-height: 1.7rem;
     /*for making icon in center*/
 }
 
-/*SECTION 04*/
+/*(E= APP DOWNLOAD LINK)*/
 
 .app-container {
     /*Parent class*/
@@ -476,7 +498,7 @@ line-height: 1.7rem;
     font-size: 4.rem;
 }
 
-/*SECTION (05NEWSLETTER)*/
+/*F= NEWSLETTER*/
 .input-container {
     /*Prent class*/
     width: 43rem;
@@ -513,7 +535,7 @@ input[type="email"]:focus {
 
 
 
-/*FOOTER STYLING*/
+/*PART#03=FOOTER STYLING*/
 .footer-container {
     margin-top: 10rem;
     /*spacing from top*/

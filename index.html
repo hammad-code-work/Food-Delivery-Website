@@ -5,40 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie Webisite</title>
-    <!--For Icon we use font awesome so first We copy Link tag from font awesome https://cdnjs.com/libraries/font-awesome and paste Here-->
+    <!--1.if we want to download icons or anything from any webiste, First we have to paste link of that website in the title. we use font awesome so first of all We copy Link tag from font awesome webite and paste here https://cdnjs.com/libraries/font-awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Then We open website of Awesome Font https://fontawesome.com/icons for icons -->
-    <!-- Link CSS stylesheet -->
-    <link rel="stylesheet" href="style.css"> <!--rel is type & href is refference of it-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" /> <!--For slider-->
+    <!-- Link the folder we make style.css is here -->
+    <link rel="stylesheet" href="style.css"> <!--rel is type & href is refference of our Folder-->
+    <!--This is the link of slider We want to download from internet so link of the webiste past here-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Link the folder we make main.js is here -->
     <script defer src="main.js"></script> <!--(1)defer for content load then run javascript (2)src is attribue-->
 </head>
 
 <body>
-    <!--As we know Every Webite have Header, Section and Footer-->
-    <!--(1).......Header Part-->
+    <!--As we know Every a Webite commanly have three parts like Header, Section and Footer & all this are semantic tags(A semantic tag is an HTML element that clearly describes the meaning of its content to both the browser and the developer.)-->
+    <!--(PART#01)........HEADER-->
+    <!--The <header> is the container for all introductory content at the top of a page (logos, titles,Headings,buttons,contact info,search bars, etc.) and in 90%+ webistes, Header also hold navbar in it which have all links and navigation buttons.-->
     <Header>
-        <!--The <header> element serves as a container for introductory or navigational content, typically housing 
-        the site's logo, primary navigation links (within a <nav> element), a site title, and sometimes a search bar.-->
-        <nav class="navbar flex between wrapper"> <!-- (1) Flexbox used for styling inside a div= is fundamentally designed to control how items are positioned horizontally (left and right) and vertically within a containe (2)between class to allign all content center.
-    (3) wrapper used to allign all content in fix position-->
+        <!--<nav>: The specific section within the header (or anywhere you want) that just groups all the main links and navigation(Moving from one page or section to another) buttons (like "Home," "Menu," "About,Logo" etc.). -->
+        <!--The <nav> is the parent element (the container), navbar is the primary name you gave that parent element.
+(2)flex class=This flex class in this parent class use for styling all content in the parent class&childs of it & also used for Everything stays inside the , <nav>, <div>,<header> etc) (3)between(to allign all content center), and (4)wrapper= navbar touching to the screen borders so we have to make a wrapper in which content remain still in allignment-->
+        <nav class="navbar flex between wrapper">
             <a href="#" class="logo">Foodie.</a>
 
-            <!--The above code is defines a navigation section (<nav>) that contains a single link (<a>). That link acts as a logo
-       for a site named "Foodie." The classes (navbar and logo) are hooks used by CSS to make this section look like
-       a proper navigation bar-->
 
+            <!--(1)Make a class & give it name navlist & its a prent class(2)Flex class= This flex class in this parent class use for styling all content in the parent class&childs of it & also helps that Everything stays inside the , <nav>, <div>,<header> etc)(3) gap-3 class= for gap between lists -->
             <ul class="navlist flex gap-3 ">
-                <!--(1)Flex to show navlist in row(2) gap-3 is class name fro gap between list -->
                 <li>
                     <a href="#">Home</a>
                     <!-- NOTE : <a>: This is the anchor tag, which defines the start of a hyperlink.
-     he href attribute (short for "hypertext reference") specifies the link's destination.
+     href attribute (short for "hypertext reference") specifies the link's destination.
    The value # (hash symbol) is a fragment identifier. When used alone, it tells the browser to link to the top of the current page
-   Contacts: This is the "link text"the visible and clickable portion of the hyperlink that users see in the browser.-->
-
+   Home: This is the "link text"the visible and clickable portion of the hyperlink that users see in the browser.-->
                 </li>
                 <li>
                     <a href="#">Menu</a>
@@ -53,38 +51,41 @@
                     <a href="#">Contacts</a>
                 </li>
             </ul>
-            <!--After list we will create an action container & put Bag icon in this from website https://fontawesome.com/icons &
-         get a button-->
+
+
+            <!--After list we will create an action container & put Bag icon in this from website https://fontawesome.com/icons & get a button-->
+            <!--(1)deskstop-action is bag icon class (2)flex= This flex class in this parent class use for styling all content in the parent class&childs of it(3)gap2 is for gap of 2rem between bag icon and sign in button-->
             <div class="dekstop-action flex gap-2">
-                <!--(1)deskstop-action is bag icon clas (2) flex(3) gap2 is for gap2 between bag icon and sign in button-->
+                <!--We use Div here for grouping content for styling purposes because no specific semantic tag (like <header> or <nav>) fits, They have no inherent meaning or visual style until CSS is applied. Div= is fundamentally designed to control how items are positioned horizontally (left and right) and vertically within a container-->
                 <!--Because we want to make it clickable so we use anchor -->
                 <a href="#" class="cart-icon">
-                    <!--For Bag icon-->
+                    <!--For Bag icon from font awesome-->
                     <i class="fa-solid fa-bag-shopping"></i>
-                    <!--in the above class, bag icon link is paste from google-->
-                    <!--in Bag icon we have to show values that what are going in card so use span-->
+                    <!--in Bag icon we have to show values that what are going in card so use span= <span> tag is used to create an inline container that holds the dynamic count of items in the user's shopping cart (0 initially) , CSS: You can style this specific number (e.g., make it red, give it a circular background, position it absolutely in the top-right corner of the bag icon).
+                     JavaScript: The browser uses JavaScript to find this specific <span> element by its class (cart-value) and update the content (change the 0 to 1, 2, 3, etc.) every time a user adds an item to their cart without reloading the whole page-->
                     <span class="cart-value">0</span>
                 </a>
 
 
+                <!--Add sign in Button & add arrow icon from website https://fontawesome.com/icons -->
                 <a href="#" class="btn"> <!---->
-                    <!--Add Button & add arrow icon from website https://fontawesome.com/icons -->
                     Sign in
                     &nbsp; <!--For space between sign in and icon-->
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <!--in the above class, arrow icon link is paste from google-->
-
                 </a>
 
 
-                <!-- we have to show hamburger in Mobile so take icon of hamburger from https://fontawesome.com/icons-->
+
+
+
+                <!-- Mobile mode=we have to show hamburger in Mobile so take icon of hamburger from https://fontawesome.com/icons-->
                 <a href="#" class="hamburger">
                     <i class="fa-solid fa-bars"></i> <!--in the above class, fa-bars icon link is paste from google-->
                 </a>
             </div>
             <!--(1)Dekstop/Mobile Menu Portion = cause After in hamburger we have to create Mobile menu
              (2) as we know we just need this list for mobile so go to the header styling, call the class and hide it-->
-            <ul class="mobile-menu">
+            <!--<ul class="mobile-menu">
                 <li>
                     <a href="#">Home</a>
                 </li>
@@ -103,7 +104,7 @@
                 <li>
                 </li>
                 <li>
-                    <!--add button & arro in mobile mode-->
+                    <!--add sign in button & arro button in mobile mode
                     <a href="#" class="btn">
                         Sign in
                         &nbsp;
@@ -114,33 +115,44 @@
             </ul>
 
             </a>
-        </nav>
-
-
+        </nav> -->
     </Header>
-    <!--(2).............SECTION PART=we also add main in Section-->
+
+
+
+
+
+    <!--(PART#02).............SECTIONS
+    (A=HERO SECTION).
+    The purpose of nesting sections in main is to create a clear, logical document structure Because  main is semantic Tag(clearly describes the meaning and purpose of the content it contains to both the browser and the developer). -->
     <main>
-        <section> <!--HERO SECTION-->
-            <div class="hero-section flex wrapper"><!--After header, start hero-section-->
+        <!--(1.HERO SECTION)= The hero section is a widely used web design term for the large, prominent banner area located at the very top of a webpage, immediately below the main navigation bar-->
+        <section>
+            <!--(1)hero-section is parent class here(2)flex= This flex class in this parent class use for styling all content in the parent class&childs of it(3)wrapper=Hero section touching to the borders so we have to make a wrapper in which whole website remain still in allignment-->
+            <div class="hero-section flex wrapper">
+                <!--We use Div for grouping content for styling purposes because no specific semantic tag (like <header> or <nav>) fits, They have no inherent meaning or visual style until CSS is applied.-->
                 <div class="content">
                     <h1>
 
                         Enjoy Your Delicius
                         <span>Food</span><!--span for further use of javascript code-->
                     </h1>
-                    <p class="para"> <!--For spaces above and bottom of paragraph-->
+                    <p class="para">
+                        <!--we need spaces above and bottom of paragraph so we use class with para name for spaces-->
 
                         we will fulfill your belly with Fast Delivery
                     </p>
-                    <div class="social-icons flex gap-2 wrapper">
-                        <!--(1)we make social-icon as a Parent class and all icons are child of it
+
+
+
+                    <!--(1)we make social-icon as a Parent class and all icons are child of it
                         (2)we flex for styling in the div then make gap between all divs (we can not call a div thats why gap metnion in html)-->
+                    <div class="social-icons flex gap-2 wrapper">
 
+                        <a href="#" class="btn">Order Now </a> <!--Sign in Button-->
 
-                        <a href="#" class="btn">Order Now</a>
-
-                        <a href="#" class="social-icon">
-                            <i class="fa-brands fa-twitter"></i>
+                        <a href="#" class="social-icon"> <!--Social icon button with twitter icon-->
+                            <i class="fa-brands fa-twitter"></i> <!--icon from Fontawesome websitte paste here-->
                         </a>
 
                         <a href="#" class="social-icon">
@@ -157,24 +169,33 @@
                     </div>
                 </div>
 
+
+                <!--This is parent class with image-container name-->
                 <div class="image-container">
-                    <img src="images/delivery-boy.png">
+                    <img src="images/delivery-boy.png"> <!--Image paste here from Our Folder-->
                 </div>
             </div>
         </section> <!--This section complete Here-->
-        <!--SECTION 01 FOR Service Card  -->
+
+
+
+        <!--(B= SERVICE CARD) -->
         <section>
+            <!--We need need space after image so, note (1)Every section have padding in top & close with Wrapper so (2) for padding from top-->
             <div class="wrapper p-top">
-                <!--We need space of after image so, note (1)Every section have padding in top & close with Wrapper so (2) for top-->
                 <!--we need some headings-->
                 <div class="text-center">
                     <h5>Our Services</h5>
                     <h2>How does it work?</h2>
                 </div>
+
+
+
+                <!--This is parent class of all service card,so these changes apply to all service cards-->
                 <div class="flex text-center mt-4">
-                    <!--(1)This div is parent class & all cards are in it (2) flex all(3) for gap-->
-                    <div class="service-card"> <!--There are total 3 card -->
-                        <div class="images-container"><!--we need images so this is parent class-->
+
+                    <div class="service-card"> <!--Card 1, There are total 3 card -->
+                        <div class="images-container">
                             <img src="images/easy-to-order.png">
                         </div>
                         <!--After image we need text so-->
@@ -187,7 +208,7 @@
                         </p>
                     </div>
                     <div class="service-card"> <!--card 2-->
-                        <div class="images-container"><!--we need images so this is parent class-->
+                        <div class="images-container">
                             <img src="images/best-quality.png">
                         </div>
                         <!--After image we need text so-->
@@ -200,7 +221,7 @@
                         </p>
                     </div>
                     <div class="service-card"> <!--card 3-->
-                        <div class="images-container"><!--we need images so this is parent class-->
+                        <div class="images-container">
                             <img src="images/fast-delivery.png">
                         </div>
                         <!--After image we need text so-->
@@ -216,16 +237,22 @@
             </div>
             <!--This section complete here-->
         </section>
-        <!--SECTION 02 For CARDS-->
+
+
+        <!--(C= CARDS)-->
         <section>
-            <div class="wrapper p-top"><!--(1)Every section have padding in top & close with Wrapper so (2) for top-->
+            <div class="wrapper p-top">
+                <!--This parent class of all (1)Every section have padding in top & close with Wrapper so (2) for Padding from top-->
                 <div class="text-center">
                     <h5>Our Menu</h5>
                     <h2>The Most Popular</h2>
                 </div>
+
+
+                <!--
                 <div class="card-list flex mt-4 gap-3">
                     <!--Parent class & list of all cards (2) as we know flex is a row by default so we do flex for making column of list(3) we need margin from top so use mt(4) we use gap for making gap between cards-->
-                    <!-- <div class="order-card">
+                <!-- <div class="order-card">
                         <div class="card-image">
                             <img src="images/burger.png">
                         </div>
@@ -233,8 +260,11 @@
                         <h4 class="price">Rs500</h4>
                         <a href="#" class="btn">Add to Cart</a>For button
 
-                    </div> -->
+                    </div> 
                 </div>
+            -->
+
+
                 <!--because we have to put data in cards so we have to make tab of your cart-->
                 <!--CART TAB-->
                 <!--card will be distribute on 4 parts according to order, 1 heading(your cart) , 2 cart list, 3total price then 4 two buttons -->
@@ -261,7 +291,7 @@
        
                             </div>
                           </div> -->
-                         </div>
+                    </div>
                     <div class="total-container"> <!--(3) total price-->
                         <h4>Total:</h4>
                         <h4 class="cart-total">RS 0</h4>
@@ -273,23 +303,32 @@
 
                     </div>
                 </div>
-            </div> 
+            </div>
         </section> <!--This section complete here-->
-        <!--SECTION 03 FOR REVIEWS-->
+
+
+
+
+        <!--(D= REVIEWS)-->
+        <!--(ALL METHOD)For Slider =search (swiper js) in google, open link, link CDN in Head(2)now copy javascript code and paste above closing body tags(3)Now for use it click on resourses in swiper js, click on demos, select anyslider like navigation, click on core, after click on core they will give you file of html & css(4)then copy and paste html code after h2, same css, and after this make main.js folder for javascript and paste java code there(5)after all this or before all this mention main.js link in head to link older-->
         <section>
+            <!--(1)as we know for padding top & space we use wrapper and ptop (2) flex for make this div in row(3)gap betweem image & content -->
             <div class="wrapper p-top flex gap-3">
-                <!--(1)as we know for padding top & space we use wrapper and ptop (2) flex for make this div in row(3)gap betweem image & content -->
-                <!--(1)Slider=search (swiper js) in google, open link, link CDN in Head(2)now copy javascript code and paste above closing body tags(3)Now for use it click on resourses in swiper, click on demos, select anyslider like navigation, click on core, after click on core they will give you file of html & css(4)then copy and paste html code after h2, same css, and after this make main.js folder for javascript and paste java code there(5)after all this or before all this mmention main.js link in head to link older-->
+
+
                 <div class="image-container"> <!--This is parent div of image-->
                     <img src="images/delivery-boy-with-phone.png">
                 </div>
-                <div class="review-container"> <!--This is mother class-->
+                <!--This is parent class of all sliders , paragraphs etc-->
+                <div class="review-container">
                     <h5>Our Reviews</h5>
                     <h2>What they say</h2>
 
+
+                    <!--This is the parent class of all sliders-->
                     <div class="swiper mySwiper">
+                        <!--(1)there are 3 slider in this parent class (2)for margin after what they say paragraph-->
                         <div class="swiper-wrapper mt-4">
-                            <!--there are 3 slider in this (2)for margin after what they say paragraph-->
                             <!-- Slide 1 -->
                             <div class="swiper-slide">
                                 <div class="flex gap-2">
@@ -302,8 +341,7 @@
                                         <h4>Alexix</h4>
                                         <!--For names-->
                                         <div>
-                                            <div class="mt-half">
-                                                <!--This is for margin top-->
+                                            <div class="mt-half"> <!--This is for margin top-->
                                                 <!--This div For stars, go to font awesome, search stars open copy html then paste in this, (imp)add paragraph after this div in swipper-->
                                                 <i class="fa-solid fa-star"></i>
                                                 <!--Link of stars from google-->
@@ -389,7 +427,7 @@
                             </div>
                             <!-- End of Slide 3 -->
                         </div>
-                        <div class="flex between"> <!--For arrow(2)flex between for center both arrows-->
+                        <div class="flex between"> <!--For arrow=(1)flex (2)between for center both arrows-->
                             <!--make class for styling in css-->
                             <a href="#" class="arrow" id="prev"><!--Left arrow-->
                                 <i class="fa-solid fa-arrow-left"></i> <!--Link of arrow icon fron font awesome-->
@@ -405,11 +443,14 @@
             </div>
             </div>
             </div>
-        </section> <!--slider/SWIPPER JS section complete here-->
-        <!--SECTION 04 FOR -->
+        </section> <!--This section complete here also slider/SWIPPER JS section complete here-->
+
+
+
+        <!--(E= APP DOWNLOAD LINK) -->
         <section>
-            <div class="wrapper p-top"> <!--As we do for spacing -->
-                <div class="app-container flex"><!--for background color of div(2)for making section in row use flex-->
+            <div class="wrapper p-top"> <!--As we do for spacing from top-->
+                <div class="app-container flex"> <!--This is parent class-->
                     <div class="image-container"><!--class of imgage for styling-->
                         <img src="images/mobile-app.png">
                     </div>
@@ -426,12 +467,16 @@
                     </div>
                 </div>
         </section> <!--This section is closed here-->
-        <!--SECTION 05 FOR NEWSLETTER-->
-        <section>
-            <div class="wrapper p-top">
-                <div class="text-center">
-                    <!--For making all content in center we pass class here this is parent of all-->
 
+
+
+
+        <!--(F= NEWSLETTER)-->
+        <section>
+            <!--As we know we wrape all section & for spacing top we use p-top-->
+            <div class="wrapper p-top">
+                <!--For making all content in center we pass class here this is parent of all-->
+                <div class="text-center">
                     <h5>
                         Our Subscribe
                     </h5>
@@ -452,17 +497,19 @@
                             Subscribe
                         </a>
                     </label>
-
                 </div>
             </div>
-        </section> <!--All sections complete here-->
+        </section> <!--All sections are complete here so main is closed-->
     </main>
-    <!--(3)............FOOTER-->
+
+
+
+    <!--(PART#03)............FOOTER-->
     <!--In footer we have to make 4 wrappers & put different content in it-->
     <footer>
-        <div class="footer-container"> <!--Parent class-->
+        <div class="footer-container"> <!--Parent class of all footers-->
             <div class="flex wrapper"> <!--for calling flex & wrapper-->
-                <div class="footer-wrapper"> <!--1st wrapper have = logo,paragraph,icons-->
+                <div class="footer-wrapper"> <!--1st wrapper= it has logo,paragraph,icons-->
                     <!--Add logo above paragraph-->
                     <a href="#" class="logo">
                         Foodie.
@@ -471,10 +518,9 @@
                         we will fullfill your tommy with delicious food.
                     </p>
                     <!--Social icons-->
+                    <!--This is the parent class of all icons & all other classes are in basic styling in css-->
                     <div class="social-icons flex gap-2 wrapper mt-one-half">
-                        <!--(5)for spacing & Styling is in Basic styling-->
-                        <!--(1)we make social-icon as a Parent class and all icons are child of it
-                        (2)we flex for styling in the div then make gap between all divs (we can not call a div thats why gap metnion in html)-->
+                        
                         <a href="#" class="social-icon">
                             <i class="fa-brands fa-twitter"></i>
                         </a>
@@ -571,6 +617,8 @@
             </div>
         </div>
     </footer><!--Footer is Finish here-->
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> <!--For Slider-->
 </body>
 
